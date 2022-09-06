@@ -15,10 +15,15 @@ int pow(int n, int exp){
 int main (void){
 
     int n, exp;
-    printf("\t -> Base: ");
+    printf("-> Base: ");
     scanf("%i", &n);
-    printf("\t -> Exponente entero positivo: ");
+    printf("-> Exponente entero positivo: ");
     scanf("%i", &exp);
+    
+    if(exp < 0){
+    	printf("-> Exponente entero positivo: ");
+    	scanf("%i", &exp);
+	}
 
     int x = pow(n, exp);
     printf("\n%i**%i = %i\n", n, exp, x);
