@@ -10,21 +10,21 @@ int main(){
 		char* ciudad;
 		int num;
 	} vector[n];
-//	
-//	for(i = 0; i < n; i++){
-//		printf("\tCiudad: ");
-//		scanf("%s", &vector[i].ciudad);
+	
+//	vector[1].calle = "ehehehe";
+//	printf("%s", vector[1].calle);
+	
+	for(i = 0; i < n; i++){
+		printf("\tCiudad : ");
+		scanf("%s", &vector[i].ciudad);
+		printf("Ciudad: %s\n", vector[1].ciudad);
 //		
-//		printf("\tCalle: ");
+//		printf("\tCalle : ");
 //		scanf("%s", &vector[i].calle);
 //		
-//		printf("\tNúmero: ");
-//		scanf("%s", &vector[i].num);
-//	}
-	
-	printf("\tCiudad: ");
-	scanf("%s", &vector[1].ciudad);
-	printf("%s", vector[1].ciudad);
+//		printf("\tNúmero : ");
+//		scanf("%i", &vector[i].num);
+	}
 	
 //	printf("Ciudad: %s\n", vector[1].ciudad);
 //	printf("Calle: %s\n", vector[1].calle);
