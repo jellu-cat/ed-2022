@@ -15,16 +15,20 @@ int factorial (int n){
 int res = 1;
 
 int recursive(int n){
+    
+    int ans;
 
-    res = res * n;
-    n--;
-
-    if(n > 0){
-        recursive(n);
+    if (n > 0) {
+        ans = n * (recursive(n - 1));
+        n--;
+        return ans;
     }
 
-    return res;
+    if (n <= 1) {
+        return 1;
+    }
 
+    return 0;
 }
 
 int main (void){

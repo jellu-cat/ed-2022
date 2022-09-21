@@ -15,6 +15,8 @@ int recursive(int x){
     if(x > 0){
         recursive(x);
     }
+
+    return 0;
 }
 
 int main(int argc, char* argv[]) {
