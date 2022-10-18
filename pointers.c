@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <locale.h>
 
+// P5 - 17-10-22 - Punteros
+
 int main(void){
 	
 	setlocale(LC_ALL,"");
@@ -9,6 +11,7 @@ int main(void){
 	
 	n = 20;
 	p = &n;
+	
 	
 	printf("Usando la variable:\n\n");
 	
