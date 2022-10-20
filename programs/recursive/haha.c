@@ -16,19 +16,13 @@ int res = 1;
 
 int recursive(int n){
     
-    int ans;
-
     if (n > 0) {
-        ans = n * (recursive(n - 1));
-        n--;
-        return ans;
+        return n * (recursive(n - 1));
     }
 
-    if (n <= 1) {
+    if (n == 1) {
         return 1;
     }
-
-    return 0;
 }
 
 int main (void){
