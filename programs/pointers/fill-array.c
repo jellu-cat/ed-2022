@@ -30,7 +30,7 @@ int compare(int x, int arr[], int size){
 	for (i = 0; i < size; i++){
 		
 		if(x == *(arr + i)){
-			printf("-> El número ya está en el arreglo.\n");
+			printf("\t (!!) El número ya está en el arreglo.\n");
 			return -1;
 		}
 	}
@@ -40,11 +40,15 @@ int compare(int x, int arr[], int size){
 int parr(int arr[], int size){
 	
 	int i = 0;
-	printf("\n\n{");
+	printf("\n{");
 	for (i = 0; i < size; i++){
-		printf("%i,", *(arr + i));
+		if(i < (size - 1)){
+			printf("%i,", *(arr + i));
+		} else{
+			printf("%i", *(arr + i));
+		}
 	}
-	printf("}\n\n");
+	printf("}");
 }
 
 int main(void){
@@ -57,14 +61,13 @@ int main(void){
 	size = asks(size);
 	int arr[size];
 	
-	for(int i = 0; i < size; i++){
+	int i = 0;
+	for(i = 0; i < size; i++){
 		n = get(n);
-		n = compare(n, arr, size);
 	
-		while(n == -1){
+		while(compare(n, arr, size) == -1){
 			n = get(n);
 			n = compare(n, arr, size);
-	
 		}
 		*(arr + i) = n;
 	}	
