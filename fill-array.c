@@ -3,6 +3,16 @@
 
 // P7 - 19-10-22 - No-repetidos
 
+int asks(int size){
+	do{
+		printf("-> Ingrese el tamaño del arreglo: ");
+		scanf("%i", &size);
+	}
+	while(size < 0);
+	// The opposite conditions
+	
+	return size;
+}
 int get(int x){
 	do{
 		printf("-> Ingrese un número entre 1 y 10: ");
@@ -32,7 +42,7 @@ int parr(int arr[], int size){
 	int i = 0;
 	printf("\n\n{");
 	for (i = 0; i < size; i++){
-		printf("%i", *(arr + i));
+		printf("%i,", *(arr + i));
 	}
 	printf("}\n\n");
 }
@@ -44,17 +54,20 @@ int main(void){
 	int size, n;
 	int* p;
 	
-	get(size);
+	size = asks(size);
 	int arr[size];
 	
-	n = get(n);
-	n = compare(n, arr, size);
-	
-	if(n == -1){
+	for(int i = 0; i < size; i++){
 		n = get(n);
-	} else{
-		*(arr) = n;
-	}
+		n = compare(n, arr, size);
+	
+		while(n == -1){
+			n = get(n);
+			n = compare(n, arr, size);
+	
+		}
+		*(arr + i) = n;
+	}	
 	
 	parr(arr, size);
 	
